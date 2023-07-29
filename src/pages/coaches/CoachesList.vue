@@ -1,9 +1,10 @@
 <template>
   <section>FILTER</section>
   <section>
+    <base-card>
     <div class="controls">
-      <button>Refresh</button>
-      <router-link to="/register">Register as coach</router-link>
+      <base-button mode="outline">Refresh</base-button>
+      <base-button link to="/register">Register as coach</base-button>
     </div>
     <ul v-if="hasCoaches">
       <Coach-item
@@ -17,7 +18,8 @@
       ></Coach-item>
       <!-- <li v-for="coach in filteredCoaches" :key="coach.id">{{ coach.firstName }}</li> -->
     </ul>
-    <h2 v-else>No coaches found.</h2>
+    <h3 v-else>No coaches found.</h3>
+  </base-card>
   </section>
 </template>
 
