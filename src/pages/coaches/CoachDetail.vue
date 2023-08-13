@@ -37,7 +37,7 @@ export default {
   },
   computed: {
     fullName() {
-      return this.selectedCoach.firstName + ' ' + this.selectedCoach.secondName;
+      return this.selectedCoach.firstName + ' ' + this.selectedCoach.lastName;
     },
     areas() {
       return this.selectedCoach.areas
@@ -49,7 +49,7 @@ export default {
       return this.selectedCoach.description
     },
     contactLink() {
-      return this.$store.path + '/' + this.id + '/contact'
+      return '/coaches' + '/' + this.id + '/contact'
     }
   },
   created() {
